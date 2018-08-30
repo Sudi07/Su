@@ -1,0 +1,279 @@
+*{
+	padding:0;margin: 0;
+	list-style: none;	
+}
+html,body{
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.1);
+}
+.warpper{
+	width: 100%;
+	height: 100%;
+	
+}
+
+.warpper .container {
+	width: 75%;
+	margin: 0 auto;
+	height: 100%;
+	background-color: white;
+
+}
+.warpper .container .textCon{
+	width: 75%;
+	margin: 0 auto;
+	text-align: center;
+
+}
+.warpper .container h1{
+	margin-bottom: 50px;
+	
+
+
+}
+.warpper .container .addBtn{
+	margin: 0 auto;
+	margin-bottom: 20px;
+	height: 100px;
+	width:100px;
+	background: #ccc;
+	color: white;
+	font-size: 50px;
+	font-weight: bold;
+	line-height: 90px;
+	border-radius: 50%;
+	/*text-align: center;*/
+	cursor: pointer;
+	transition: background 0.5s;
+
+}
+.warpper .container .addBtn:hover{
+
+	background-color:#999;
+}
+.warpper .container ul{
+	width: 75%;
+	/*background: rgba(0.0.0.0.7);*/
+	
+	margin:0 auto;
+	padding-bottom:  10px;
+
+
+}
+.warpper .container ul li{
+	position: relative;
+	margin: 0 auto;
+	width: 100%;
+	height: 40px;
+	background: #ccc;
+	line-height: 38px;
+	box-sizing: border-box;
+	padding: 0 5px;
+	margin-bottom: 3px;
+	/*box-shadow: */
+	border-radius: 3px;
+	transition: background 0.5s;
+	
+}
+.warpper .container ul li:hover{
+	
+	background: #999;
+
+}
+.warpper .container ul li .line-Left{
+	float: left;
+	overflow: hidden;
+	width: 60%;
+}
+.warpper .container ul li .line-Left .classCheck{
+	float: left;
+	margin-right: 5px;
+	
+}
+.warpper .container ul li .line-Left .classTitle{
+	float: left;
+	margin-right: 8px;
+	
+}
+ .warpper .container ul li .line-Left  .timeRun_P{
+
+ 	float: left;
+	margin-right: 5px;
+	font-size: 12px;
+	color: blue;
+
+	
+ }
+.warpper .container ul li .line-Right{
+	float: right;
+
+}
+.warpper .container ul li .line-Right span{
+	float: right;
+	cursor: pointer;
+	margin-left: 5px;
+
+}
+.warpper .container ul li .classCheck{
+	width:20px;
+	height: 20px;
+	margin-top: 11px;
+		
+}
+
+#complate{
+	background: rgba(204,204,204,0.5);
+	opacity: 0.5;
+}
+#complate:before{
+   content:""; 
+   display: block; 
+   position: absolute;
+   background: rgba(0,0,0,0.2);
+   width: 100%;
+   height: 2px;
+   left: 0;
+   top:50%;
+}
+.clearfix:after{
+   content:""; 
+   display: block; 
+   clear:both; 
+}
+
+/*================弹窗部分============*/
+
+.back_mask{
+
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top:0;
+	left: 0;
+	background-color: rgba(0,0,0,.5);
+	z-index: 9;
+	display: none;
+	
+
+}
+.open-edit{
+	position: absolute;
+	min-width: 400px;
+	background: #CCCC00;
+	padding: 10px;
+	left: 50%;
+	top: 25%;
+	
+	margin-left: -200px;
+	text-align: center;
+	/*border: 1px solid red;*/
+	border-radius: 5px;
+	box-shadow: 0,2px,3px,rgba(0,0,0,0.5);
+	z-index:99;
+	
+}
+.open-edit form{
+
+	width: 100%;
+	font-size: 18px;
+
+
+}
+.open-edit form .input-Title{ 
+ 
+	width: 70%;
+	height: 30px;
+	display: block;
+	margin:0 auto;
+	margin-top: 8px;
+	margin-bottom: 10px;
+	border-radius: 5px;
+	
+}
+.open-edit form textarea.input-contants{
+	width: 70%;
+	height: 100px;
+	
+	padding: 3px;
+	margin-bottom: 10px;
+	border-radius: 5px;
+}
+.open-edit form .update-btn,.input-Time{
+
+	width: 30%;
+	height: 30px;
+	margin-bottom: 10px;
+
+}
+
+.open-edit form div{
+	margin-top:10px;
+	margin-bottom:10px;
+}
+
+/* remind 提醒响铃 */
+
+.remind_box{
+	position: absolute;
+	left: 0;
+	top: -100px;
+	width: 100%;
+	height: 100px;
+	background: rgb(204, 204, 0,0.9);
+	border-radius: 10px;
+
+}
+.remind_box .remind_cont{
+
+	width: 30%;
+	height: 40px;
+	margin: 0 auto;
+	margin-top: 40px; 
+	text-align: center;
+}
+
+/* -----自定义删除弹窗 -------*/
+.mask_judge{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top:0;
+	left: 0;
+	background-color: rgba(0,0,0,.5);
+	z-index: 9;
+	display: none;
+}
+.mask_judge .open_judge{
+
+	position: absolute;
+	width: 350px;
+	height: 150px;
+	left: 50%;
+	top:50%;
+	transform: translate(-50%,-50%);
+	background: rgb(255, 255, 255,0.6);
+	border-radius: 6px;
+	box-shadow: 0px 2px 3px rgba(0,0,0,0.4);
+	text-align: center;
+}
+.mask_judge .open_judge p{
+	margin-top:45px;
+
+}
+.mask_judge .open_judge div{
+	margin-top: 25px;
+}
+.mask_judge .open_judge button:nth-child(1){
+	background: #CCCC00;
+	width: 60px;
+	height: 30px;
+	border-radius: 8px;
+}
+
+.mask_judge .open_judge button:nth-child(2){
+	background: rgb(160, 160, 157);
+	width: 60px;
+	height: 30px;
+	border-radius: 8px;
+}
